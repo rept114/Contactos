@@ -64,11 +64,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contactos" id="hzs-W6-alL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jOA-6m-wZg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jOA-6m-wZg">
+                            <connections>
+                                <action selector="doTapNuevoC:" destination="BYZ-38-t0r" id="bcL-wt-B6b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="fuI-iu-vvO" kind="show" id="b7l-GJ-IYA"/>
-                        <segue destination="tuN-OU-8UL" kind="show" id="Mmo-y0-6wI"/>
+                        <segue destination="fuI-iu-vvO" kind="show" identifier="editarcontacto" id="b7l-GJ-IYA"/>
+                        <segue destination="tuN-OU-8UL" kind="show" identifier="nuevocontacto" id="Mmo-y0-6wI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

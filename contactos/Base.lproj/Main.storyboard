@@ -14,20 +14,20 @@
         <!--Contactos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="contactos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContactosController" customModule="contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="09p-6D-aej">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="09p-6D-aej" userLabel="TvContactos">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="55" id="Wd5-5U-5Ov">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaContactos" rowHeight="55" id="Wd5-5U-5Ov" customClass="CeldaContactosController" customModule="contactos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wd5-5U-5Ov" id="Fnh-sN-ycQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="54.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-dz-5ew">
@@ -50,8 +50,17 @@
                                                 <constraint firstItem="Hef-vr-3hM" firstAttribute="top" secondItem="Fnh-sN-ycQ" secondAttribute="top" id="zzZ-0v-LrQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblContacto" destination="Hef-vr-3hM" id="y3U-eO-adR"/>
+                                            <outlet property="lblNumero" destination="y6H-dz-5ew" id="GPP-oi-Vq6"/>
+                                            <segue destination="fuI-iu-vvO" kind="show" identifier="editarcontacto" id="yrD-yf-nfk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0Ke-l8-2ZD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G9Y-TO-hF5"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +80,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="fuI-iu-vvO" kind="show" identifier="editarcontacto" id="b7l-GJ-IYA"/>
+                        <outlet property="TvContactos" destination="09p-6D-aej" id="hQm-DG-BFh"/>
                         <segue destination="tuN-OU-8UL" kind="show" identifier="nuevocontacto" id="Mmo-y0-6wI"/>
                     </connections>
                 </viewController>
@@ -143,7 +152,7 @@
         <!--Editar-->
         <scene sceneID="dAw-Yl-5wC">
             <objects>
-                <viewController title="Editar" id="fuI-iu-vvO" sceneMemberID="viewController">
+                <viewController title="Editar" id="fuI-iu-vvO" customClass="EditarController" customModule="contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rtG-pu-b0R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +184,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-np-7Mq">
                                 <rect key="frame" x="299" y="330" width="56" height="30"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="doTapGuardar:" destination="fuI-iu-vvO" eventType="touchUpInside" id="u7D-uO-3Tg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,6 +208,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X5i-1p-a5g"/>
                     </view>
+                    <connections>
+                        <outlet property="txtContacto" destination="Qg2-q1-MJL" id="2hS-kt-aIr"/>
+                        <outlet property="txtNumero" destination="6EV-H7-81B" id="brL-VK-DVg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WM-ny-utp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

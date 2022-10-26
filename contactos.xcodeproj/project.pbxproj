@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D11434F29097F420087C9F7 /* CeldaContactosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11434E29097F420087C9F7 /* CeldaContactosController.swift */; };
+		3D114351290983F30087C9F7 /* EditarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D114350290983F30087C9F7 /* EditarController.swift */; };
 		3D9A96072906E38500B5E53D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A96062906E38500B5E53D /* AppDelegate.swift */; };
-		3D9A96092906E38500B5E53D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A96082906E38500B5E53D /* ViewController.swift */; };
+		3D9A96092906E38500B5E53D /* ContactosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A96082906E38500B5E53D /* ContactosController.swift */; };
 		3D9A960C2906E38500B5E53D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A960A2906E38500B5E53D /* Main.storyboard */; };
 		3D9A960E2906E38700B5E53D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A960D2906E38700B5E53D /* Assets.xcassets */; };
 		3D9A96112906E38700B5E53D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A960F2906E38700B5E53D /* LaunchScreen.storyboard */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D11434E29097F420087C9F7 /* CeldaContactosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaContactosController.swift; sourceTree = "<group>"; };
+		3D114350290983F30087C9F7 /* EditarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarController.swift; sourceTree = "<group>"; };
 		3D9A96032906E38500B5E53D /* contactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9A96062906E38500B5E53D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D9A96082906E38500B5E53D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D9A96082906E38500B5E53D /* ContactosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosController.swift; sourceTree = "<group>"; };
 		3D9A960B2906E38500B5E53D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D9A960D2906E38700B5E53D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9A96102906E38700B5E53D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,9 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				3D9A96062906E38500B5E53D /* AppDelegate.swift */,
-				3D9A96082906E38500B5E53D /* ViewController.swift */,
+				3D9A96082906E38500B5E53D /* ContactosController.swift */,
 				3D9A960A2906E38500B5E53D /* Main.storyboard */,
+				3D11434E29097F420087C9F7 /* CeldaContactosController.swift */,
 				3D9A960D2906E38700B5E53D /* Assets.xcassets */,
+				3D114350290983F30087C9F7 /* EditarController.swift */,
 				3D9A96182906EB1D00B5E53D /* contactos.swift */,
 				3D9A960F2906E38700B5E53D /* LaunchScreen.storyboard */,
 				3D9A96122906E38700B5E53D /* Info.plist */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D11434F29097F420087C9F7 /* CeldaContactosController.swift in Sources */,
 				3D9A96192906EB1D00B5E53D /* contactos.swift in Sources */,
-				3D9A96092906E38500B5E53D /* ViewController.swift in Sources */,
+				3D114351290983F30087C9F7 /* EditarController.swift in Sources */,
+				3D9A96092906E38500B5E53D /* ContactosController.swift in Sources */,
 				3D9A96072906E38500B5E53D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

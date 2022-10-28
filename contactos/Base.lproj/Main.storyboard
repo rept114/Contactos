@@ -75,13 +75,12 @@
                     <navigationItem key="navigationItem" title="Contactos" id="hzs-W6-alL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jOA-6m-wZg">
                             <connections>
-                                <action selector="doTapNuevoC:" destination="BYZ-38-t0r" id="bcL-wt-B6b"/>
+                                <segue destination="tuN-OU-8UL" kind="show" identifier="nuevocontacto" id="xee-gd-x6c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="TvContactos" destination="09p-6D-aej" id="hQm-DG-BFh"/>
-                        <segue destination="tuN-OU-8UL" kind="show" identifier="nuevocontacto" id="Mmo-y0-6wI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -91,7 +90,7 @@
         <!--Nuevo contacto-->
         <scene sceneID="73z-A1-5rm">
             <objects>
-                <viewController title="Nuevo contacto" id="tuN-OU-8UL" sceneMemberID="viewController">
+                <viewController title="Nuevo contacto" id="tuN-OU-8UL" customClass="NuevoContactoController" customModule="contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9YE-rC-Hcb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,6 +143,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uY7-aO-PV1"/>
                     </view>
+                    <connections>
+                        <outlet property="txtContacto" destination="nTi-Rt-hp2" id="4X8-Kc-ve0"/>
+                        <outlet property="txtNumero" destination="o07-ZI-Pat" id="PUX-67-bbr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHW-Ej-eBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,6 +15,7 @@
 		3D9A960E2906E38700B5E53D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A960D2906E38700B5E53D /* Assets.xcassets */; };
 		3D9A96112906E38700B5E53D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9A960F2906E38700B5E53D /* LaunchScreen.storyboard */; };
 		3D9A96192906EB1D00B5E53D /* contactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A96182906EB1D00B5E53D /* contactos.swift */; };
+		3DC85194290C23C4004FEB7C /* NuevoContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC85193290C23C4004FEB7C /* NuevoContactoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3D9A96102906E38700B5E53D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D9A96122906E38700B5E53D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D9A96182906EB1D00B5E53D /* contactos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactos.swift; sourceTree = "<group>"; };
+		3DC85193290C23C4004FEB7C /* NuevoContactoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoContactoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3D9A96182906EB1D00B5E53D /* contactos.swift */,
 				3D9A960F2906E38700B5E53D /* LaunchScreen.storyboard */,
 				3D9A96122906E38700B5E53D /* Info.plist */,
+				3DC85193290C23C4004FEB7C /* NuevoContactoController.swift */,
 			);
 			path = contactos;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC85194290C23C4004FEB7C /* NuevoContactoController.swift in Sources */,
 				3D11434F29097F420087C9F7 /* CeldaContactosController.swift in Sources */,
 				3D9A96192906EB1D00B5E53D /* contactos.swift in Sources */,
 				3D114351290983F30087C9F7 /* EditarController.swift in Sources */,

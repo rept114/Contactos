@@ -22,7 +22,6 @@ class ContactosController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var TvContactos: UITableView!
     var contactos: [Contactos] = []
-    var callbackActualizar: ((String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,17 +36,32 @@ class ContactosController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func doTapNuevoC(_ sender: Any) {
-        performSegue(withIdentifier: "nuevocontacto", sender: self)
-    }
+    //@IBAction func doTapNuevoC(_ sender: Any) {
+        //performSegue(withIdentifier: "nuevocontacto", sender: self)
+    //}
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editarcontacto" {
         let destino = segue.destination as! EditarController
+        destino.callbackActualizar = EditarContacto
         destino.contactos = contactos[TvContactos.indexPathForSelectedRow!.row]
         }
+        if segue.identifier == "nuevocontacto" {
+            let destino = segue.destination as! NuevoContactoController
+            destino.callbackActualizar = NuevoContacto
+        }
+    }
+    func NuevoContacto (contactos:Contactos){
+        self.contactos.append(contactos)
+        TvContactos.reloadData()
+    }
+    func EditarContacto (contactos:Contactos) {
+        TvContactos.reloadData()
     }
 
         }
